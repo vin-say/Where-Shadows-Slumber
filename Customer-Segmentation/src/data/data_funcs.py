@@ -29,12 +29,11 @@ def cd(newdir):
 def csv_to_sql(csv_dir, csv_name, db_dir, db_name, tab_name):
     '''Stores data from a .csv to a SQLite database.
     
-    Arguments: 
-    csv_dir (Path object): directory containing .csv file
-    csv_name (str): name of .csv file
-    db_dir (Path object): directory containing SQLite database
-    db_name (str): name of SQLite database
-    tab_name (str): name of table into which .csv data is to be imported
+    param csv_dir (Path object): directory containing .csv file
+    param csv_name (str): name of .csv file
+    param db_dir (Path object): directory containing SQLite database
+    param db_name (str): name of SQLite database
+    param tab_name (str): name of table into which .csv data is to be imported
     '''
     
     with cd(csv_dir):

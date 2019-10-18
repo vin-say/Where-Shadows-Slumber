@@ -17,16 +17,13 @@ def main(raw_path, interim_path, processed_path):
     logger = logging.getLogger(__name__)
     logger.info('making final data set from raw data')
 
-
-#    csv_dir = Path(root_dir + 'data/raw/')
     csv_name = 'ustwo_followers.csv'
-#    db_dir = Path(root_dir + 'data/interim')
     db_name = 'customer-segmentation.sqlite'
     tab_name = 'ustwo_followers'
 #    
     csv_to_sql(csv_dir=raw_path, csv_name=csv_name, db_dir=interim_path, 
                db_name=db_name, tab_name=tab_name)
-    print('raw_path')
+
 if __name__ == '__main__':
     log_fmt = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
     logging.basicConfig(level=logging.INFO, format=log_fmt)
