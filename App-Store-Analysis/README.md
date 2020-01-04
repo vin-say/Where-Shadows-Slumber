@@ -1,57 +1,18 @@
 App-Store-Analysis
 ==============================
+author: Vincent Sayseng
 
-Analysis of mobile game features on the app store. Insights can inform promotionals goals or pricing of the mobile game Where Shadows Slumber.   
+Every mobile game available on iOS has an [online profile](https://apps.apple.com/us/app/where-shadows-slumber/id1221749074) listing features of the app, such as price, age rating, and review score distribution. These features were scraped and prepared to fit a regression model that aims to predict the popularity of a given game. Knowing the most important features that are correlated with game popularity will inform the business strategy of Game Revenant. 
 
-Project Organization
-------------
+All processing and analysis is contained in the Jupyter notebook, [ios_games_store_analysis.] (https://github.com/vin-say/Where-Shadows-Slumber/blob/master/App-Store-Analysis/notebooks/ios_games_store_analysis.ipynb). 
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
+Scripts used to scrape the online store can be found in another [repository.](https://github.com/vin-say/web-scraping/tree/master/iosgames)
+
+Note that the notebook assumes the existence of a data directory (not uploaded to github), with the following layout:
+├── data
+│   ├── external      
+│   ├── interim    
+│   ├── processed     
+│   └── raw            
 
 
---------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
